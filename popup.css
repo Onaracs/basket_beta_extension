@@ -1,0 +1,11 @@
+body {
+  font-family: 'Lato', 'sans-serif';
+  width: 300px;
+}
+
+#baskets,
+#friends {
+  margin-top: 0;
+  width: 50%;
+  float: left;
+}
