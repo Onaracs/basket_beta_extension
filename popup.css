@@ -30,7 +30,7 @@ body {
 }
 
 .basket-click:hover {
-  background-color: #119805;
+  background-color: #90EE90;
 }
 
 .basket-click a {
@@ -40,4 +40,19 @@ body {
 .basket-click a:hover {
   color: red;
   text-decoration: none;
+}
+
+.friend-list {
+  display: inline;
+}
+
+.friend-list img {
+  padding-left: 16px;
+  width: 50%;
+}
+
+.friend-list li {
+  font-size: 14px;
+  display: inline-block;
+  list-style: none;
 }
