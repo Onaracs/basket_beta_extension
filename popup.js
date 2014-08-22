@@ -5,16 +5,21 @@ window.onload = function() {
         // document.querySelector('#popup').innerHTML = tabUrl;
     });
 
-    var req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost:3000/users_folders', true);
-    req.onreadystatechange = function(){
-        // successful response
-        if (req.readyState==4 && req.status==200) {
-            // console.log(req.responseText);
-            document.querySelector('.basket-list').innerHTML = (req.responseText);
+    function request_handler(url, changed_div) {
+        var req = new XMLHttpRequest();
+        req.open('GET', url, true);
+        req.onreadystatechange = function(){
+            // successful response
+            if (req.readyState==4 && req.status==200) {
+                // console.log(req.responseText);
+                document.querySelector(changed_div).innerHTML = (req.responseText);
+            }
         }
+        req.send();
     }
-    req.send();
+
+    request_handler('http://localhost:3000/users_folders', '.basket-list')
+    request_handler('http://localhost:3000/users_friends', '.friend-list')
 
     $('.basket-list').on('click', '.basket-click', function(){
         var id = $(this).attr('value');

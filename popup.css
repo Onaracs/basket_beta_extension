@@ -1,6 +1,7 @@
 body {
   font-family: 'Lato', 'sans-serif';
   width: 300px;
+  background-color: #90EE90;
 }
 
 .container {
@@ -18,11 +19,18 @@ body {
   /*overflow: scroll;*/
 }
 
-
 .basket-click {
-  padding: 2.5px 0;
+  background-color: white;
+  text-align: center;
+  height: 24px;
+  margin: 2.5px 0;
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
   font-size: 16px;
+}
+
+.basket-click:hover {
+  background-color: #90EE90;
 }
 
 .basket-click a {
@@ -32,4 +40,19 @@ body {
 .basket-click a:hover {
   color: red;
   text-decoration: none;
+}
+
+.friend-list {
+  display: inline;
+}
+
+.friend-list img {
+  padding-left: 16px;
+  width: 50%;
+}
+
+.friend-list li {
+  font-size: 14px;
+  display: inline-block;
+  list-style: none;
 }
