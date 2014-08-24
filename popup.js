@@ -29,4 +29,13 @@ window.onload = function() {
         req.send(JSON.stringify({url: tabUrl,
                                 basketId: id}));
     })
+
+    $('.friend-list-wrapper').on('click', '.friend-container', function() {
+        var id = $(this).attr('value');
+        var req = new XMLHttpRequest(); 
+        req.open("POST", 'http://localhost:3000/sent_link');
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        req.send(JSON.stringify({url: tabUrl,
+                                friendId: id}));
+    })
 }
