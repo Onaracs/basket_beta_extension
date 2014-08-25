@@ -1,8 +1,6 @@
 window.onload = function() {
     chrome.tabs.getSelected(null, function(tab) {
         tabUrl = tab.url;
-        // $('#popup').html(tabUrl);
-        // document.querySelector('#popup').innerHTML = tabUrl;
     });
 
     function request_handler(url, changed_div) {
