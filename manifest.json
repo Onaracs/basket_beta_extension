@@ -3,10 +3,11 @@
 
   "name": "basket",
    "description": "Easily save and share your favorite links!",
-   "version": "0.7",
+   "version": "0.9",
 
   "permissions": [
     "tabs",
+    "*://*/*",
     "http://*/",
     "http://*/*",
     "https://*/*",
@@ -15,7 +16,8 @@
   ],
 
   "background": {
-    "page" : "background.html" },
+    "scripts": ["background.js"] 
+  },
   
   "browser_action": {
     "default_icon": "/icons/icon.png",
@@ -24,8 +26,9 @@
   },
 
   "content_scripts": [{
-    "matches": ["http://*/*"],
-    "js": ["scripts/jquery.min.js", "inject.js"]}], 
+    "js": ["scripts/jquery.min.js", "scripts/content.js"],
+    "matches": ["*://*/*"]
+  }], 
 
   "icons": {
     "16": "/icons/icon.png",
