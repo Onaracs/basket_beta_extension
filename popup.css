@@ -49,8 +49,9 @@ body {
 }
 
 .basket-click:hover {
-  background-color: #ffffff;
-  color: black;
+  background: #111;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #0a0c0e;
 }
 
 .basket-click a {

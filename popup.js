@@ -36,4 +36,17 @@ window.onload = function() {
         req.send(JSON.stringify({url: tabUrl,
                                 friendId: id}));
     })
+
+    $('#click').on('click', function () {
+        console.log("This has been clicked!");
+
+        // chrome.tabs.executeScript(null, { "code": "extension.highlight_h1()" });
+
+        chrome.tabs.executeScript(null,
+                                 { "code": "test" },
+                                 function(results){
+                                    console.log(results);
+                                 });
+
+    });
 }
