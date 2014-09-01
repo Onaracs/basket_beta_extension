@@ -1,12 +1,19 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse){
-    // console.log(sender.tab ?
-    //             "from a content script:" + sender.tab.url :
-    //             "from the extension");
-    // var tags = document.getElementsByTagName('h1');
-    var tags = []
+    // var tags = document.getElementsByTagName("h1");
+    // // var question = typeof(tags);
+    // // var question = Object.keys(tags[0]);
+    // // var question = tags["length"];
+    // // var question = typeof(tags);
+    // var question = tags[0].innerText;
+    // if (request.greeting == "hello")
+    //   sendResponse({farewell: question});
+
+    var info = [];
+    var metas = 
+
     if (request.greeting == "hello")
-      sendResponse({farewell: tags});
+      sendResponse({farewell: info});
   });
 
 // var extension = {
