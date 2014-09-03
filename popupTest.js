@@ -13,16 +13,6 @@ window.onload = function() {
   $('.friend-list-wrapper').on('click', 'friend-container', function() {
     sendData('sent_link', tabUrl)
   }
-
-  $('#click').on('click', function () {
-      console.log("This has been clicked!");
-      chrome.tabs.executeScript(null,
-                               { "code": "test" },
-                               function(results){
-                                  console.log(results);
-                               });
-
-  });
 }
 
 function request_handler(url, changed_div) {
@@ -39,10 +29,21 @@ function request_handler(url, changed_div) {
 }
 
 function sendData(path, tabUrl){
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+    chrome.tabs.sendMessage(tabs[0].id, {ping: "Send Page Info"}, function(response) {
+      console.log(response.page_info);
+      var pageInfo = response.page_info;
+    });  
+  });
+
   var id = $(this).attr('value');
   var req = new XMLHttpRequest(); 
+
   req.open("POST", 'http://localhost:3000/' + path);
   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   req.send(JSON.stringify({url: tabUrl,
-                          friendId: id}));
+                          friendId: id,
+                          pageTitle: pageInfo.title,
+                          pageDescription: pageInfo.description,
+                          pageImg: pageInfo.image}));
 }
