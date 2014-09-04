@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "basket",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "Easily save and share your favorite links!",
   "background": {
     "scripts": ["background.js"] 
