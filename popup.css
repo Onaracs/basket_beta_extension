@@ -2,15 +2,16 @@ body {
   font-family: 'Lato', 'sans-serif';
   width: 300px;
   background-color: #90EE90;
+  margin: 0;
 }
 
 .container {
   height: 400px;
-
 }
 
 #baskets,
 #friends {
+  height: 100%;
   margin-top: 0;
   width: 50%;
   float: left;
@@ -19,18 +20,38 @@ body {
   /*overflow: scroll;*/
 }
 
+.title {
+  margin: 15px 0;
+  height: 5%;
+}
+
+/*Baskets
+==============================*/
+.basket-list {
+  background: #191919;
+  height: 87.5%;
+}
+
 .basket-click {
-  background-color: white;
+  cursor: pointer;
+
+  color: white;
+  font-family: 'Montserrat';
   text-align: center;
+
   height: 24px;
+  padding: 10px 0;
   margin: 2.5px 0;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #0a0c0e;
   font-size: 16px;
 }
 
 .basket-click:hover {
-  background-color: #90EE90;
+  background: #111;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #0a0c0e;
 }
 
 .basket-click a {
@@ -42,17 +63,42 @@ body {
   text-decoration: none;
 }
 
-.friend-list {
-  display: inline;
+/*Friends
+==============================*/
+.friend-list-wrapper {
+  background-color: #ffffff;
+  height: 87.5%;
 }
 
-.friend-list img {
+.friend-list {
+  display: inline;
+  width: 100%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.friend-container {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  position: relative;
+}
+
+.friend-container img {
   padding-left: 16px;
   width: 50%;
 }
 
-.friend-list li {
+.friend-container li {
   font-size: 14px;
   display: inline-block;
   list-style: none;
+}
+
+.friend-name {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -12px;
 }
