@@ -7,13 +7,11 @@ window.onload = function() {
   request_handler('http://localhost:3000/users_friends', '.friend-list')
 
   $('.basket-list').on('click', '.basket-click', function(){
-      sendData('new_link', tabUrl)
-      console.log("Basket has been clicked!");
+    sendData('new_link', tabUrl)
   })
 
   $('.friend-list-wrapper').on('click', '.friend-container', function(){
-      //   sendData('sent_link', tabUrl)
-      console.log('Friend has been clicked!');
+    sendData('sent_link', tabUrl)
   })
 }
 
