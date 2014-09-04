@@ -46,32 +46,3 @@ function sendData(path, url){
     });  
   });
 };
-
-
-//Old Code
-// //====================================
-// function sendData(path, url){
-//   var id = $(this).attr('value');
-//   var req = new XMLHttpRequest(); 
-
-//   req.open("POST", 'http://localhost:3000/' + path);
-//   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-//   req.send(JSON.stringify({url: tabUrl,
-//                           unqiueId: id,
-//                           pageInfo: pageInfo}));
-// };
-
-
-// function metaInfo(){
-//   var returnValue;
-
-//   chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-//     chrome.tabs.sendMessage(tabs[0].id, {ping: "Send Page Info"}, function(response) {
-//       console.log(response.page_info);
-//       returnValue = response.page_info;
-//       debugger
-//     });  
-//   });
-
-//   return returnValue;
-// }
