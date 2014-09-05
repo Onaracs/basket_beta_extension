@@ -7,6 +7,8 @@ window.onload = function() {
   request_handler('http://localhost:3000/users_friends', '.friend-list')
 
   $('.basket-list').on('click', '.basket-click', function(){
+    $(this).css({"background": "#191919",
+                "color": "white"});
     var folderId = $(this).attr('value');
     sendData('new_link', folderId, tabUrl)
   })

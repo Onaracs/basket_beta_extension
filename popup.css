@@ -1,12 +1,13 @@
 body {
   font-family: 'Lato', 'sans-serif';
   width: 300px;
-  background-color: #90EE90;
+  /*background-color: #90EE90;*/
   margin: 0;
 }
 
 .container {
   height: 400px;
+  overflow: scroll;
 }
 
 #baskets,
@@ -16,50 +17,61 @@ body {
   width: 50%;
   float: left;
   font-size: 24px;
-  /*max-height: 1000px;*/
-  /*overflow: scroll;*/
 }
 
 .title {
   margin: 15px 0;
   height: 5%;
+  margin: 0;
+  height: 12%;
+  position: fixed;
+  width: 48%;
+  background-color: #90EE90;
+}
+
+.title-text {
+  margin-top: 10%;
 }
 
 /*Baskets
 ==============================*/
 .basket-list {
-  background: #191919;
   height: 87.5%;
+  margin-top: 49px;
 }
 
 .basket-click {
   cursor: pointer;
+  background: #ffffff;
 
-  color: white;
+  color: black;
   font-family: 'Montserrat';
   text-align: center;
 
   height: 24px;
   padding: 10px 0;
-  margin: 2.5px 0;
+  margin: 1px 0;
 
-  border-top: 1px solid #212121;
-  border-bottom: 1px solid #0a0c0e;
+  /*border-top: 1px solid #212121;
+  border-bottom: 1px solid #0a0c0e*/;
+  border-top: 1px solid #e5e5e5;
+  /*border-bottom: 1px solid #e5e5e5;*/
   font-size: 16px;
 }
 
 .basket-click:hover {
-  background: #111;
+  background: #f5f5f5;
   border-top: 1px solid #111;
   border-bottom: 1px solid #0a0c0e;
 }
 
-.basket-click a {
-  text-decoration: none;
+.basket-click:visited {
+  background: #90EE90;
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #0a0c0e;
 }
 
-.basket-click a:hover {
-  color: red;
+.basket-click a {
   text-decoration: none;
 }
 
@@ -68,6 +80,8 @@ body {
 .friend-list-wrapper {
   background-color: #ffffff;
   height: 87.5%;
+  margin-top: 49px;
+  border-left: 8px solid #ddd
 }
 
 .friend-list {
@@ -80,10 +94,17 @@ body {
 }
 
 .friend-container {
+  cursor: pointer;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
   position: relative;
+}
+
+.friend-container:hover {
+  background: #f5f5f5;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #0a0c0e;
 }
 
 .friend-container img {
