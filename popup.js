@@ -14,7 +14,10 @@ window.onload = function() {
   })
 
   $('.friend-list-wrapper').on('click', '.friend-container', function(){
-    sendData('sent_link', tabUrl)
+    $(this).css({"background": "#191919",
+                "color": "white"});
+    var friendId = $(this).attr('value');
+    sendData('sent_link', friendId, tabUrl)
   })
 }
 
@@ -43,6 +46,7 @@ function sendData(path, id, url){
       req.send(JSON.stringify({url: url,
                               uniqueId: id,
                               pageInfo: pageInfo}));
+
     });  
   });
 };
