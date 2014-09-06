@@ -7,17 +7,24 @@ window.onload = function() {
   request_handler('http://localhost:3000/users_friends', '.friend-list')
 
   $('.basket-list').on('click', '.basket-click', function(){
+    var folderName = $(this).text();
     $(this).css({"background": "#191919",
                 "color": "white"});
     var folderId = $(this).attr('value');
     sendData('new_link', folderId, tabUrl)
+
+    $('.confirmation-message').text('You threw a link in your ' +
+                                      folderName + ' basket!')
   })
 
   $('.friend-list-wrapper').on('click', '.friend-container', function(){
+    var friendName = $(this).text();
     $(this).css({"background": "#191919",
                 "color": "white"});
     var friendId = $(this).attr('value');
     sendData('sent_link', friendId, tabUrl)
+
+    $('.confirmation-message').text('Link sent to ' + friendName)
   })
 }
 

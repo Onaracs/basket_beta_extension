@@ -1,6 +1,6 @@
 body {
   font-family: 'Lato', 'sans-serif';
-  width: 300px;
+  width: 440px;
   /*background-color: #90EE90;*/
   margin: 0;
 }
@@ -37,7 +37,7 @@ body {
 ==============================*/
 .basket-list {
   height: 87.5%;
-  margin-top: 49px;
+  margin-top: 54px;
 }
 
 .basket-click {
@@ -80,7 +80,7 @@ body {
 .friend-list-wrapper {
   background-color: #ffffff;
   height: 87.5%;
-  margin-top: 49px;
+  margin-top: 54px;
   border-left: 8px solid #ddd
 }
 
@@ -122,4 +122,14 @@ body {
   position: absolute;
   margin-top: 10px;
   margin-left: -12px;
+}
+
+.confirmation {
+  height: 50px;
+  width: 100%;
+}
+
+.confirmation-message {
+  text-align: center;
+  padding-top: 12px;
 }
