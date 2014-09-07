@@ -1,9 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "basket",
+  "name": "Basket",
+  "short_name": "Basket",
   "version": "0.9.6",
-  "description": "Easily save and share your favorite links!",
+  "description": "Easily save and share your favorite links through Basket!",
 
   "permissions": [
     "tabs",
