@@ -3,7 +3,7 @@
 
   "name": "b@sket",
   "short_name": "b@sket",
-  "version": "0.9.6",
+  "version": "0.9.9.2",
   "description": "Easily save and share your favorite links through Basket!",
 
   "permissions": [
@@ -17,7 +17,7 @@
   ],
   
   "browser_action": {
-    "default_icon": "/icons/basket128.png",
+    "default_icon": "/icons/basketgreen128.png",
     "default_title": "Basket",
     "default_popup": "popup.html"
   },
@@ -31,7 +31,7 @@
 
   "icons": {
     "16": "/icons/basket16.png",
-    "48": "/icons/basketblack48.png",
+    "48": "/icons/basketgreen48.png",
     "128": "/icons/basket128.png"
   }
 

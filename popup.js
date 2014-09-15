@@ -3,8 +3,8 @@ window.onload = function() {
       tabUrl = tab.url;
   });
 
-  request_handler('http://localhost:3000/users_folders', '.basket-list')
-  request_handler('http://localhost:3000/users_friends', '.friend-list')
+  request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
+  request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
 
   $('.basket-list').on('click', '.basket-click', function(){
     var folderName = $(this).text();
@@ -46,9 +46,11 @@ function sendData(path, id, url){
     chrome.tabs.sendMessage(tabs[0].id, {ping: "Send Page Info"}, function(response) {
       pageInfo = response.page_info;
 
+      console.log(pageInfo);
+      console.log(url);
       var req = new XMLHttpRequest(); 
 
-      req.open("POST", 'http://localhost:3000/' + path);
+      req.open("POST", 'http://www.mybasketsapp.com/' + path);
       req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       req.send(JSON.stringify({url: url,
                               uniqueId: id,
