@@ -19,9 +19,15 @@ window.onload = function() {
   var maxLength = 64;
 
   function checkLength() {
-      if(area.value.length < maxLength) {
-          message.innerHTML = (maxLength-area.value.length) + " characters remainging";
+      var charsLeft = maxLength - area.value.length;
+
+      if(charsLeft < 5){
+        $('#message').css("color", "red");
+      } else {
+        $('#message').css("color", "black");
       }
+
+      message.innerHTML = (charsLeft) + " characters remainging";
   }
   setInterval(checkLength, 100);
 
@@ -39,11 +45,13 @@ window.onload = function() {
     $('.note-container').slideDown("medium", function(){});
 
     $('.send-btn-button').on('click', function(){
-      messageText = $('textarea#note').val();
-
-      sendData('new_link', folderId, messageText, tabUrl)
-
-      $('.alert').text('Link saved to ' + folderName)
+      if (area.value.length > maxLength){
+        $('.alert').text('Message cannot be greater than 64 characters!').css('color', 'red');
+      } else {
+        messageText = $('textarea#note').val();
+        sendData('new_link', folderId, messageText, tabUrl)
+        $('.alert').text('Link saved to ' + folderName).css('color', 'black');
+      };
     });
   })
 
@@ -61,14 +69,16 @@ window.onload = function() {
     $('.note-container').slideDown("medium", function(){})
 
     $('.send-btn-button').on('click', function(){
-      messageText = $('textarea#note').val();
-
-      sendData('sent_link', friendId, messageText, tabUrl)
-
-      $('.alert').text('Link sent to ' + friendName)
+      if (area.value.length > maxLength){
+        $('.alert').text('Message cannot be greater than 64 characters!').css('color', 'red');
+      } else {
+        messageText = $('textarea#note').val();
+        sendData('sent_link', friendId, messageText, tabUrl)
+        $('.alert').text('Link sent to ' + friendName).css('color', 'black');
+      };
     });
   })
-}
+};
 
 
 
@@ -104,13 +114,4 @@ function sendData(path, id, message, url){
 
     });  
   });
-};
-
-function confirmSend(folderName){
-  this.folderName = folderName
-
-  $('.note-container').slideDown("medium", function(){
-    console.log(folderName);
-    console.log(folderId);
-  })
 };

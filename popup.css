@@ -192,6 +192,7 @@ body {
 }
 
 .send-btn-button{
+  cursor: pointer;
   border-radius: 15px;
   background-color: #f5f5f5;
 }
