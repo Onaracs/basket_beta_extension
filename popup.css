@@ -1,13 +1,30 @@
 body {
-  font-family: 'Lato', 'sans-serif';
+  font-family: 'Montserrat', 'sans-serif';
   width: 440px;
   /*background-color: #90EE90;*/
   margin: 0;
 }
 
 .container {
-  height: 400px;
-  overflow: scroll;
+  height: 315px;
+}
+
+
+/*Confirmation
+==============================*/
+.confirmation {
+  height: 3%;
+  width: 100%;
+  background-color: #90EE90;
+
+  position: fixed;
+  z-index: 100;
+}
+
+.confirmation-message {
+  text-align: center;
+  padding-top: 4px;
+  font-weight: bold;
 }
 
 #baskets,
@@ -20,42 +37,40 @@ body {
 }
 
 .title {
-  margin: 15px 0;
+  margin-top: 0;
   height: 5%;
-  margin: 0;
-  height: 12%;
+  height: 40px;
   position: fixed;
-  width: 48%;
+  width: 50%;
   background-color: #90EE90;
 }
 
 .title-text {
-  margin-top: 10%;
+  margin-top: 4%;
 }
 
 /*Baskets
 ==============================*/
 .basket-list {
   height: 87.5%;
-  margin-top: 54px;
+  margin-top: 39px;
+  overflow-y: auto;
 }
 
 .basket-click {
   cursor: pointer;
   background: #ffffff;
-
+  font-family: 'Lato', 'sans-serif';
   color: black;
-  font-family: 'Montserrat';
+  
   text-align: center;
 
   height: 24px;
   padding: 10px 0;
   margin: 1px 0;
 
-  /*border-top: 1px solid #212121;
-  border-bottom: 1px solid #0a0c0e*/;
-  border-top: 1px solid #e5e5e5;
-  /*border-bottom: 1px solid #e5e5e5;*/
+  /*border-top: 1px solid #ddd;*/
+  border-bottom: 1px solid #ddd;
   font-size: 16px;
 }
 
@@ -80,25 +95,27 @@ body {
 .friend-list-wrapper {
   background-color: #ffffff;
   height: 87.5%;
-  margin-top: 54px;
+  margin-top: 39px;
   border-left: 8px solid #ddd
 }
 
 .friend-list {
+  font-family: 'Lato', 'sans-serif';
   display: inline;
   width: 100%;
   position: absolute;
   padding: 0;
   margin: 0;
-  height: 100%;
+  height: 58.5%;
 }
 
 .friend-container {
   cursor: pointer;
-  border-top: 1px solid #ddd;
+  /*border-top: 1px solid #ddd;*/
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
   position: relative;
+  margin-bottom: -30px;
 }
 
 .friend-container:hover {
@@ -124,12 +141,68 @@ body {
   margin-left: -12px;
 }
 
-.confirmation {
-  height: 50px;
-  width: 100%;
+/*Notes
+==============================*/
+.note-container {
+  display: none;
+  height: 159px;
+  clear: both;
+  background-color: #ececea;
+  border: 1px solid #dddddd;
+
+  /*Glow for the form input
+  border: 1px solid #90EE90;*/
 }
 
-.confirmation-message {
+.note-container .alert{
+  font-family: 'Lato';
+  margin: 9px 0;
   text-align: center;
-  padding-top: 12px;
+}
+
+.form{
+  padding: 0 15px;
+}
+
+.text-container{
+  margin: 0;
+}
+
+#note{
+  width: 97%;
+  height: 50px;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 16px;
+}
+
+#message{
+  font-family: 'Lato', 'sans-serif';
+  float: left;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.send-btn{
+  float: right;
+  margin-right: 19px;
+}
+
+.send-btn img{
+  width: 24px;
+}
+
+.send-btn-button{
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+.btn-text{
+  font-family: 'Lato', 'sans-serif';
+  font-size: 14px;
+  display: inline-block;
+  margin: 0;
+  top: -2px;
+  position: relative;
+  left: 1px;
 }
