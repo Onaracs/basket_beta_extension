@@ -20,7 +20,7 @@
  -->
     <div id="baskets">
       <h6 class="title">
-        <center class="title-text">Save</center>
+        <center class="title-text">Save to B@sket</center>
       </h6>
       <div class="basket-list">
       </div>
@@ -28,7 +28,7 @@
 
     <div id="friends">
       <h6 class="title">
-        <center class="title-text">Share</center>
+        <center class="title-text">Share with Friend</center>
       </h6>
       <div class="friend-list-wrapper">
         <ul class="friend-list">
@@ -42,9 +42,17 @@
       You are about to send/save a link
     </div>
     <form class="form">
-      <label for="note">Add note:</label><br />
-      <input type="text" name="message" id="note" placeholder="Add note here...">
+      <label for="note">Add note (optional):</label><br />
+      <p class="text-container"><textarea id="note" name="note" cols="50" rows="7"></textarea></p>
     </form>
+    <div class="character-count">
+      <p id="message"></p>
+    </div>
+    <div class="send-btn">
+      <button class="send-btn-button">
+        <img src="icons/basketblack128.png"><p class="btn-text">Save</p>
+      </button>
+    </div>
   </div>
 
   <!-- <div>Icons made by SimpleIcon from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div> -->
