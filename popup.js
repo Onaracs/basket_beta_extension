@@ -44,6 +44,10 @@ window.onload = function() {
 
     $('.note-container').slideDown("medium", function(){});
 
+    $('.cancel-btn').on('click', function(){
+      $('.note-container').slideUp("medium", function(){})
+    })
+
     $('.send-btn-button').on('click', function(){
       if (area.value.length > maxLength){
         $('.alert').text('Message cannot be greater than 64 characters!').css('color', 'red');
@@ -67,6 +71,10 @@ window.onload = function() {
     $('.btn-text').text('Send')
     
     $('.note-container').slideDown("medium", function(){})
+
+    $('.cancel-btn').on('click', function(){
+      $('.note-container').slideUp("medium", function(){})
+    })
 
     $('.send-btn-button').on('click', function(){
       if (area.value.length > maxLength){
@@ -115,3 +123,5 @@ function sendData(path, id, message, url){
     });  
   });
 };
+
+
