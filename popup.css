@@ -100,13 +100,14 @@ body {
 }
 
 .friend-list {
+  overflow-y: auto;
   font-family: 'Lato', 'sans-serif';
   display: inline;
   width: 100%;
   position: absolute;
   padding: 0;
   margin: 0;
-  height: 58.5%;
+  height: 48.5%;
 }
 
 .friend-container {

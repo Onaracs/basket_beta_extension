@@ -7,10 +7,10 @@ window.onload = function() {
 
   // Get users baskets and friends
   // ================================
-  // request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
-  // request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
-  request_handler('http://localhost:3000/users_folders', '.basket-list')
-  request_handler('http://localhost:3000/users_friends', '.friend-list')
+  request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
+  request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
+  // request_handler('http://localhost:3000/users_folders', '.basket-list')
+  // request_handler('http://localhost:3000/users_friends', '.friend-list')
 
   // Check character count of message
   // ================================
@@ -104,8 +104,8 @@ function sendData(path, id, message, url){
 
       var req = new XMLHttpRequest(); 
 
-      // req.open("POST", 'http://www.mybasketsapp.com/' + path);
-      req.open("POST", 'http://localhost:3000/' + path);
+      req.open("POST", 'http://www.mybasketsapp.com/' + path);
+      // req.open("POST", 'http://localhost:3000/' + path);
       req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       req.send(JSON.stringify({url: url,
                               uniqueId: id,
