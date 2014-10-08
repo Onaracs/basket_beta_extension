@@ -67,7 +67,7 @@ window.onload = function() {
     $(this).css({"background": "#191919",
                 "color": "white"});
 
-    $('.alert').text('Send link to ' + friendName)
+    $('.alert').text('Click the send button to send this link to ' + friendName)
     $('.btn-text').text('Send')
     
     $('.note-container').slideDown("medium", function(){})
