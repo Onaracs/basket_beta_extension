@@ -9,6 +9,13 @@ body {
   height: 315px;
 }
 
+.highlight {
+  background-color: #191919;
+  border-top: 1px solid #0a0c0e;
+  border-bottom: 1px solid #0a0c0e;
+  color: #fff;
+}
+
 
 /*Confirmation
 ==============================*/
@@ -55,13 +62,12 @@ body {
   height: 87.5%;
   margin-top: 39px;
   overflow-y: auto;
+  background: #ffffff;
 }
 
 .basket-click {
   cursor: pointer;
-  background: #ffffff;
   font-family: 'Lato', 'sans-serif';
-  color: black;
   
   text-align: center;
 
@@ -75,9 +81,10 @@ body {
 }
 
 .basket-click:hover {
-  background: #f5f5f5;
-  border-top: 1px solid #111;
+  background-color: #191919;
+  border-top: 1px solid #0a0c0e;
   border-bottom: 1px solid #0a0c0e;
+  color: #fff;
 }
 
 .basket-click:visited {
@@ -120,9 +127,13 @@ body {
 }
 
 .friend-container:hover {
-  background: #f5f5f5;
+  /*background: #f5f5f5;
   border-top: 1px solid #111;
+  border-bottom: 1px solid #0a0c0e;*/
+  background-color: #191919;
+  border-top: 1px solid #0a0c0e;
   border-bottom: 1px solid #0a0c0e;
+  color: #fff;
 }
 
 .friend-container img {
@@ -237,3 +248,6 @@ body {
   position: relative;
   left: 1px;
 }
+
+
+

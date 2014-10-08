@@ -1,16 +1,14 @@
 window.onload = function() {
+  // Get users baskets and friends
+  // ================================
+  request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
+  request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
+
   // Get current url
   // ================================
   chrome.tabs.getSelected(null, function(tab) {
       tabUrl = tab.url;
   });
-
-  // Get users baskets and friends
-  // ================================
-  request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
-  request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
-  // request_handler('http://localhost:3000/users_folders', '.basket-list')
-  // request_handler('http://localhost:3000/users_friends', '.friend-list')
 
   // Check character count of message
   // ================================
@@ -34,10 +32,14 @@ window.onload = function() {
   // Save a link to a basket
   // ================================
   $('.basket-list').on('click', '.basket-click', function(){
+    $('.basket-click').removeClass('highlight');
+    $('.friend-container').removeClass('highlight');
+
     var folderName = $(this).text();
     var folderId = $(this).attr('value');
-    $(this).css({"background": "#191919",
-                "color": "white"});
+    
+    $(this).addClass('highlight'),
+
     
     $('.alert').text('Save link to ' + folderName)
     $('.btn-text').text('Save')
@@ -55,6 +57,7 @@ window.onload = function() {
         messageText = $('textarea#note').val();
         sendData('new_link', folderId, messageText, tabUrl)
         $('.alert').text('Link saved to ' + folderName).css('color', 'black');
+        $('.note-container').slideUp("medium", function(){});
       };
     });
   })
@@ -62,10 +65,13 @@ window.onload = function() {
   // Send a link to a friend
   // ================================
   $('.friend-list-wrapper').on('click', '.friend-container', function(){
+    $('.basket-click').removeClass('highlight');
+    $('.friend-container').removeClass('highlight');
+
     var friendName = $(this).text();
     var friendId = $(this).attr('value');
-    $(this).css({"background": "#191919",
-                "color": "white"});
+
+    $(this).addClass('highlight'),
 
     $('.alert').text('Click the send button to send this link to ' + friendName)
     $('.btn-text').text('Send')
@@ -83,6 +89,7 @@ window.onload = function() {
         messageText = $('textarea#note').val();
         sendData('sent_link', friendId, messageText, tabUrl)
         $('.alert').text('Link sent to ' + friendName).css('color', 'black');
+        $('.note-container').slideUp("medium", function(){});
       };
     });
   })
