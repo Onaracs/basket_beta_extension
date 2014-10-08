@@ -73,7 +73,7 @@ window.onload = function() {
 
     $(this).addClass('highlight'),
 
-    $('.alert').text('Click the send button to send this link to ' + friendName)
+    $('.alert').text('Send this link to ' + friendName)
     $('.btn-text').text('Send')
     
     $('.note-container').slideDown("medium", function(){})

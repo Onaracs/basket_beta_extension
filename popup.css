@@ -50,6 +50,7 @@ body {
   position: fixed;
   width: 50%;
   background-color: #90EE90;
+  font-weight: 100;
 }
 
 .title-text {
@@ -212,7 +213,11 @@ body {
 .send-btn-button,
 .cancel-btn-button{
   cursor: pointer;
-  border-radius: 15px;
+}
+
+.cancel-btn-button {
+  width: 60px;
+  height: 39px;
 }
 
 
@@ -241,6 +246,7 @@ body {
 
 .cancel-btn-text{
   font-family: 'Lato', 'sans-serif';
+  padding-top: 5px;
   font-size: 14px;
   display: inline-block;
   margin: 0;
