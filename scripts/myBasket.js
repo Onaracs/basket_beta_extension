@@ -1,0 +1,1 @@
+var basketNG = angular.module('basketNg', []);

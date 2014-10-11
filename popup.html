@@ -1,23 +1,22 @@
 <!doctype html>
-<html>
+<html ng-app="basketNg" ng-csp>
 <head>
   <title>Basket</title>
   <link rel="stylesheet" type="text/css" href="popup.css">
 
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script type="text/javascript" src="/scripts/angular.min.js"></script>
+  <script type="text/javascript" src="/scripts/myBasket.js"></script>
   <script src="scripts/jquery.min.js"></script>
   <script language='javascript' src='background.js'></script>
   <script language='javascript' src='popup.js'></script>
 </head>
+
 <body>
   <div class="container">
-<!--     <div class="confirmation">
-      <div class="confirmation-message">
-      </div>
-    </div>
- -->
+    {{ 1 + 1}}
     <div id="baskets">
       <h6 class="title">
         <center class="title-text">Save to Basket</center>
