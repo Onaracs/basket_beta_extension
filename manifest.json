@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "b@sket",
-  "short_name": "b@sket",
-  "version": "0.9.9.4",
+  "name": "Basket",
+  "short_name": "Basket",
+  "version": "0.9.9.6",
   "description": "Easily save and share your favorite links through Basket!",
 
   "permissions": [
