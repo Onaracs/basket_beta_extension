@@ -3,6 +3,8 @@ window.onload = function() {
   // ================================
   request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
   request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
+  // request_handler('http://www.localhost:3000.com/users_folders', '.basket-list')
+  // request_handler('http://www.localhost:3000.com/users_friends', '.friend-list')
 
   // Get current url
   // ================================
@@ -106,6 +108,7 @@ function request_handler(url, changed_div) {
       // successful response
       if (req.readyState==4 && req.status==200) {
           // console.log(req.responseText);
+          console.log(req.responseText);
           document.querySelector(changed_div).innerHTML = (req.responseText);
       }
   }
