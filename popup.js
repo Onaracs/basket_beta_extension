@@ -3,6 +3,7 @@ window.onload = function() {
   // ================================
   request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
   request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
+  request_handler('http://localhost:3000/users_inbox_links', '.shared-link-list')
   // request_handler('http://www.localhost:3000.com/users_folders', '.basket-list')
   // request_handler('http://www.localhost:3000.com/users_friends', '.friend-list')
 

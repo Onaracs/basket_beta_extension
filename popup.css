@@ -1,7 +1,7 @@
 body {
   font-family: 'Montserrat', 'sans-serif';
   /*width: 440px;*/
-  width: 600px;
+  width: 700px;
   /*background-color: #90EE90;*/
   margin: 0;
 }
@@ -46,6 +46,10 @@ body {
   font-size: 24px;
 }
 
+#shared-links {
+  width: 300px;
+}
+
 .title {
   margin-top: 0;
   height: 5%;
@@ -53,6 +57,18 @@ body {
   position: fixed;
   /*width: 50%;*/
   width: 200px;
+  background-color: #90EE90;
+  font-weight: 100;
+}
+
+.shared-links-title {
+  width: 300px;
+  margin-top: 0;
+  height: 5%;
+  height: 40px;
+  position: fixed;
+  /*width: 50%;*/
+  width: 300px;
   background-color: #90EE90;
   font-weight: 100;
 }
@@ -65,6 +81,7 @@ body {
 ==============================*/
 .basket-list {
   height: 73.5%;
+  margin-top: 40px;
   overflow-y: auto;
   background: #ffffff;
 }
@@ -278,5 +295,33 @@ body {
 
 /*Shared Links
 ==================================*/
+.shared-link-list {
+  height: 73.5%;
+  margin-top: 40px;
+  overflow-y: auto;
+  background: #ffffff;
+  font-family: 'Lato';
+  font-size: 16px;
+}
 
+.shared-link-wrapper {
+  border-bottom: 1px solid #ddd;
+}
+.shared-link-wrapper-container {
+  padding: 15px 5px;
+}
+.shared-link-wrapper p {
+  margin: 0;
+}
 
+.sender-name,
+.shared-link-date,
+.shared-link-time {
+  display: inline;
+}
+
+.shared-link-message,
+.shared-link-date,
+.shared-link-time {
+  font-size: 12px;
+}
