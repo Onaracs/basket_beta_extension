@@ -80,7 +80,6 @@ window.onload = function() {
         messageText = $('textarea#note').val();
         sendData('new_link', folderId, messageText, tabUrl)
         $('.alert').text('Link saved to ' + folderName).css('color', 'black');
-        $('.note-container').slideUp("medium", function(){});
       };
     });
   })
@@ -112,7 +111,6 @@ window.onload = function() {
         messageText = $('textarea#note').val();
         sendData('sent_link', friendId, messageText, tabUrl)
         $('.alert').text('Link sent to ' + friendName).css('color', 'black');
-        $('.note-container').slideUp("medium", function(){});
       };
     });
   })
