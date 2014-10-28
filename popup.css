@@ -1,7 +1,7 @@
 body {
   font-family: 'Montserrat', 'sans-serif';
   /*width: 440px;*/
-  width: 700px;
+  width: 550px;
   /*background-color: #90EE90;*/
   margin: 0;
 }
@@ -10,100 +10,105 @@ body {
   height: 315px;
 }
 
-.highlight {
-  background-color: #191919;
-  border-top: 1px solid #0a0c0e;
-  border-bottom: 1px solid #0a0c0e;
-  color: #fff;
-}
-
-
-/*Confirmation
-==============================*/
-.confirmation {
-  height: 3%;
+.header-title {
+  height: 15px;
   width: 100%;
   background-color: #90EE90;
-
-  position: fixed;
-  z-index: 100;
-}
-
-.confirmation-message {
+  margin-top: 0;
+  padding-top: 5px;
+  padding-bottom: 16px;
   text-align: center;
-  padding-top: 4px;
-  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Lato';
 }
 
-#baskets,
-#friends,
-#shared-links {
-  height: 100%;
-  margin-top: 0;
-  /*width: 50%;*/
-  width: 200px;
+.header-title img {
+  width: 5%;
+  display: inline;
+}
+
+.header-title h3 {
+  font-weight: 100;
+  margin: 0;
+  display: inline;
+  letter-spacing: -3px;
+  font-size: 29px;
+  font-family: 'Montserrat';
+}
+
+/*===================================
+            Selection Area
+====================================*/
+.selections-name {
   float: left;
-  font-size: 24px;
+  width: 280px;
 }
 
-#shared-links {
-  width: 300px;
+div.selections-wrapper {
+  float: left;
+  height: 147px;
+  width: 290px;
 }
 
-.title {
-  margin-top: 0;
-  height: 5%;
-  height: 40px;
-  position: fixed;
-  /*width: 50%;*/
-  width: 200px;
-  background-color: #90EE90;
-  font-weight: 100;
+div.click-selection {
+  cursor: pointer;
+  height: 48px;
+  text-align: center;
+  top: 0;
+  background-color: #191919;
+  border-top: 1px solid #0a0c0e;
+  /*border-bottom: 1px solid #0a0c0e;*/
+  color: #fff;
+}
+div.click-selection h4 {
+  margin: 0;
+  padding: 15px;
+  font-family: 'Lato';
+  font-size: 16px;
+  text-align: left;
+  padding-left: 32px;
 }
 
-.shared-links-title {
-  width: 300px;
-  margin-top: 0;
-  height: 5%;
-  height: 40px;
-  position: fixed;
-  /*width: 50%;*/
-  width: 300px;
-  background-color: #90EE90;
-  font-weight: 100;
+
+/*===================================
+            Display Area
+====================================*/
+.display-wrapper {
+  float: left;
+  height: 308px;
+  width: 263px;
+  background-color: #fff;
+  border-left: 6px solid #ddd;
 }
 
-.title-text {
-  margin-top: 4%;
-}
-
-/*Baskets
-==============================*/
+/* Basket List
+*****************************/
 .basket-list {
-  height: 73.5%;
-  margin-top: 40px;
+  height: 100%;
+  width: 106%;
   overflow-y: auto;
-  background: #ffffff;
+  display: none;
 }
 
 .basket-click {
   cursor: pointer;
   font-family: 'Lato', 'sans-serif';
-  
   text-align: center;
-
   height: 24px;
   padding: 10px 0;
-
-  /*border-top: 1px solid #ddd;*/
-  border-bottom: 1px solid #ddd;
   font-size: 16px;
+  background-color: #C6FFC9;
+  border: 1px solid #C6FFC9;
+  border-radius: 40px;
+  margin: 10px 10px;
+  width: 200px;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .basket-click:hover {
-  background-color: #616161;
-  border-top: 1px solid #0a0c0e;
-  border-bottom: 1px solid #0a0c0e;
+  background-color: #90ee90;
+  border: 1px solid #90ee90;
   color: #fff;
 }
 
@@ -117,60 +122,37 @@ body {
   text-decoration: none;
 }
 
-
-
-.shared-links-click {
-  margin-top: 39px;
-  cursor: pointer;
-  font-family: 'Lato', 'sans-serif';
-  text-align: center;
-  height: 24px;
-  padding: 10px 0;
-  /* margin: 1px 0; */
-  /* border-top: 1px solid #ddd; */
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
-}
-
-
-
-/*Friends
-==============================*/
+/* Friend List
+*****************************/
 .friend-list-wrapper {
-  background-color: #ffffff;
-  height: 87.5%;
-  margin-top: 39px;
-  border-left: 8px solid #ddd
+  height: 100%;
+  width: 106%;
+  overflow-y: auto;
 }
 
 .friend-list {
-  overflow-y: auto;
   font-family: 'Lato', 'sans-serif';
   display: inline;
-  width: 48.5%;
-  position: absolute;
+  width: 54.5%;
   padding: 0;
   margin: 0;
-  height: 276px;
 }
 
 .friend-container {
   cursor: pointer;
-  /*border-top: 1px solid #ddd;*/
-  border-bottom: 1px solid #ddd;
+  background-color: #C6FFC9;
+  border: 1px solid #C6FFC9;
+  border-radius: 40px;
+  margin: auto;
+  width: 200px;
+  margin-top: 10px;
   padding: 10px 0;
   position: relative;
-  margin-bottom: -30px;
 }
 
 .friend-container:hover {
-  /*background: #f5f5f5;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #0a0c0e;*/
-  background-color: #616161;
-  border-top: 1px solid #0a0c0e;
-  border-bottom: 1px solid #0a0c0e;
-  color: #fff;
+  background-color: #90ee90;
+  border: 1px solid #90ee90;
 }
 
 .friend-container img {
@@ -190,27 +172,89 @@ body {
   margin-left: -12px;
 }
 
-/*Notes
-==============================*/
-.note-container {
+/* Inbox List
+*****************************/
+.shared-link-list a {
+  text-decoration: none;
+}
+
+.shared-link-list {
+  height: 100%;
+  overflow-y: auto;
+  background: #ffffff;
+  font-family: 'Lato';
+  font-size: 16px;
   display: none;
+}
+
+.shared-link-wrapper {
+  border-bottom: 1px solid #ddd;
+  margin: 10px;
+}
+.shared-link-wrapper-container {
+  font-size: 14px;
+  color: black;
+  background-color: #C6FFC9;
+  border: 1px solid #C6FFC9;
+  border-radius: 10px;
+  padding: 8px 5px;
+  margin: auto;
+  width: 218px;
+}
+.shared-link-wrapper p {
+  margin: 0;
+}
+
+.sender-name {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+.shared-link-date,
+.shared-link-time {
+  display: inline;
+}
+
+.shared-link-title-url p {
+  margin-top: 8px;
+}
+
+.shared-link-message {
+  font-size: 16px;
+}
+
+.shared-link-date,
+.shared-link-time {
+  font-size: 12px;
+}
+
+
+
+
+/*===================================
+            Note Container
+====================================*/
+.note-container {
   height: 159px;
-  clear: both;
+  width: 100%;
   background-color: #ececea;
   border: 1px solid #dddddd;
-
+  clear: both;
   /*Glow for the form input
   border: 1px solid #90EE90;*/
 }
 
 .note-container .alert{
+  font-size: 14px;
   font-family: 'Lato';
   margin: 9px 0;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .form{
   padding: 0 15px;
+  font-family: 'Lato';
 }
 
 .text-container{
@@ -218,6 +262,8 @@ body {
 }
 
 #note{
+  resize: none;
+  outline: none;
   width: 97%;
   height: 50px;
   font-family: 'Lato', 'sans-serif';
@@ -258,9 +304,13 @@ body {
 
 
 .send-btn-button {
+  border: 1px solid #b2ffb2;
+  border-radius: 40px;
   background-color: #b2ffb2;
 }
 .cancel-btn-button {
+  border: 1px solid #ff9999;
+  border-radius: 40px;
   background-color: #ff9999;
 }
 .send-btn-button:hover {
@@ -278,6 +328,7 @@ body {
   top: -2px;
   position: relative;
   left: 1px;
+  padding-bottom: 4px;
 }
 
 .cancel-btn-text{
@@ -293,35 +344,103 @@ body {
 
 
 
-/*Shared Links
-==================================*/
-.shared-link-list {
-  height: 73.5%;
-  margin-top: 40px;
-  overflow-y: auto;
-  background: #ffffff;
-  font-family: 'Lato';
-  font-size: 16px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.highlight {
+  background-color: #191919;
+  border-top: 1px solid #0a0c0e;
+  border-bottom: 1px solid #0a0c0e;
+  color: #fff;
+}*/
+
+/*Confirmation
+==============================*/
+/*
+.confirmation {
+  height: 3%;
+  width: 100%;
+  background-color: #90EE90;
+
+  position: fixed;
+  z-index: 100;
 }
 
-.shared-link-wrapper {
+.confirmation-message {
+  text-align: center;
+  padding-top: 4px;
+  font-weight: bold;
+}
+
+#baskets,
+#friends,
+#shared-links {
+  height: 100%;
+  margin-top: 0;
+  width: 50%;
+  width: 200px;
+  float: left;
+  font-size: 24px;
+}
+
+#shared-links {
+  width: 300px;
+}
+
+.title {
+  margin-top: 0;
+  height: 5%;
+  height: 40px;
+  position: fixed;
+  width: 50%;
+  width: 200px;
+  background-color: #90EE90;
+  font-weight: 100;
+}
+
+.shared-links-title {
+  width: 300px;
+  margin-top: 0;
+  height: 5%;
+  height: 40px;
+  position: fixed;
+  width: 50%;
+  width: 300px;
+  background-color: #90EE90;
+  font-weight: 100;
+}
+
+.title-text {
+  margin-top: 4%;
+}
+*/
+/*Baskets
+==============================*/
+/*.shared-links-click {
+  margin-top: 39px;
+  cursor: pointer;
+  font-family: 'Lato', 'sans-serif';
+  text-align: center;
+  height: 24px;
+  padding: 10px 0;
+   margin: 1px 0; 
+   border-top: 1px solid #ddd; 
   border-bottom: 1px solid #ddd;
-}
-.shared-link-wrapper-container {
-  padding: 15px 5px;
-}
-.shared-link-wrapper p {
-  margin: 0;
-}
+  font-size: 16px;
+}*/
 
-.sender-name,
-.shared-link-date,
-.shared-link-time {
-  display: inline;
-}
 
-.shared-link-message,
-.shared-link-date,
-.shared-link-time {
-  font-size: 12px;
-}
+
+
+
+

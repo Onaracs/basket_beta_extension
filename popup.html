@@ -10,6 +10,7 @@
   <script type="text/javascript" src="/scripts/angular.min.js"></script>
   <script type="text/javascript" src="/scripts/myBasket.js"></script>
   <script src="scripts/jquery.min.js"></script>
+
   <script language='javascript' src='background.js'></script>
   <script language='javascript' src='popup.js'></script>
 </head>
@@ -17,6 +18,65 @@
 <body>
   <div class="container">
 
+    <section name="header">
+      <div class="header-title">
+        <img src="icons/basketblack128.png"><h3>Basket</h3>
+      </div>
+    </section>
+
+    <section name="selections" class="selections-name">
+      <div class="selections-wrapper">
+        <div class="click-selection friend-select">
+          <h4>Send to Friend</h4>
+        </div>
+        <div class="click-selection basket-select">
+          <h4>Save to Basket</h4>
+        </div>
+        <div class="click-selection inbox-select">
+          <h4>Shared With Me</h4>
+        </div>
+      </div>
+
+
+      <div class="note-container">
+        <div class="alert">
+          You are about to send/save a link
+        </div>
+        <form class="form">
+          <label for="note">Add note (optional):</label><br />
+          <p class="text-container"><textarea id="note" name="note" cols="50" rows="7"></textarea></p>
+        </form>
+        <div class="character-count">
+          <p id="message"></p>
+        </div>
+        <div class="send-btn">
+          <button class="send-btn-button">
+            <img src="icons/basketblack128.png"><p class="btn-text">Save</p>
+          </button>
+        </div>
+        <div class="cancel-btn">
+          <button class="cancel-btn-button">
+            <p class="cancel-btn-text">Cancel</p>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <section name="display">
+      <div class="display-wrapper">
+        <div class="basket-list">
+        </div>
+
+        <div class="friend-list-wrapper">
+          <ul class="friend-list">
+          </ul>
+        </div>
+
+        <div class="shared-link-list">
+        </div>
+      </div>
+    </section>
     <!-- <div ng-controller="linksController">
       <button ng-click="fetchLinks()">Click Me</button>
       <ul>
@@ -25,63 +85,7 @@
         </li>
       </ul>
     </div> -->
-
-    <div id="shared-links">
-      <h6 class="shared-links-title">
-        <center class="title-text">Links shared with you</center>
-      </h6>
-      <div class="shared-link-list">
-      </div>
-    </div>
-
-    <div id="baskets">
-      <h6 class="title">
-        <center class="title-text">Save to Basket</center>
-      </h6>
-      <!-- <div class="shared-links-click">
-        Shared
-      </div> -->
-      <div class="basket-list">
-      </div>
-    </div>
-
-    <div id="friends">
-      <h6 class="title">
-        <center class="title-text">Share with Friend</center>
-      </h6>
-      <div class="friend-list-wrapper">
-        <ul class="friend-list">
-        </ul>
-      </div>
-    </div>
-
   </div>
-
-  <div class="note-container">
-    <div class="alert">
-      You are about to send/save a link
-    </div>
-    <form class="form">
-      <label for="note">Add note (optional):</label><br />
-      <p class="text-container"><textarea id="note" name="note" cols="50" rows="7"></textarea></p>
-    </form>
-    <div class="character-count">
-      <p id="message"></p>
-    </div>
-    <div class="send-btn">
-      <button class="send-btn-button">
-        <img src="icons/basketblack128.png"><p class="btn-text">Save</p>
-      </button>
-    </div>
-    <div class="cancel-btn">
-      <button class="cancel-btn-button">
-        <p class="cancel-btn-text">Cancel</p>
-      </button>
-    </div>
-  </div>
-
   <!-- <div>Icons made by SimpleIcon from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div> -->
-
-
 </body>
 </html>

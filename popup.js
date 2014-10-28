@@ -1,16 +1,36 @@
 window.onload = function() {
   // Get users baskets and friends
   // ================================
-  request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
   request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
-  request_handler('http://localhost:3000/users_inbox_links', '.shared-link-list')
-  // request_handler('http://www.localhost:3000.com/users_folders', '.basket-list')
-  // request_handler('http://www.localhost:3000.com/users_friends', '.friend-list')
+  // request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
+  // request_handler('http://www.mybasketsapp.com/users_inbox_links', '.shared-link-list')
 
   // Get current url
   // ================================
   chrome.tabs.getSelected(null, function(tab) {
       tabUrl = tab.url;
+  });
+
+
+
+  $('.basket-select').on('click', function(){
+      request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
+    $('.basket-list').show();
+    $('.friend-list-wrapper').hide();
+    $('.shared-link-list').hide();
+  });
+
+  $('.friend-select').on('click', function(){
+    $('.friend-list-wrapper').show();
+    $('.basket-list').hide();
+    $('.shared-link-list').hide();
+  });
+
+  $('.inbox-select').on('click', function(){
+      request_handler('http://www.mybasketsapp.com/users_inbox_links', '.shared-link-list')
+    $('.shared-link-list').show();
+    $('.basket-list').hide();
+    $('.friend-list-wrapper').hide();
   });
 
   // Check character count of message
@@ -28,7 +48,7 @@ window.onload = function() {
         $('#message').css("color", "black");
       }
 
-      message.innerHTML = (charsLeft) + " characters remainging";
+      message.innerHTML = (charsLeft);
   }
   setInterval(checkLength, 100);
 
