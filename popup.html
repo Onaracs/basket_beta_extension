@@ -10,7 +10,7 @@
   <script type="text/javascript" src="/scripts/angular.min.js"></script>
   <script type="text/javascript" src="/scripts/myBasket.js"></script>
   <script src="scripts/jquery.min.js"></script>
-
+  <link rel="stylesheet" href="/styles/font-awesome/css/font-awesome.min.css">
   <script language='javascript' src='background.js'></script>
   <script language='javascript' src='popup.js'></script>
 </head>
@@ -40,7 +40,7 @@
 
       <div class="note-container">
         <div class="alert">
-          You are about to send/save a link
+          Send to: <p class="friend-name-alert"></p>
         </div>
         <form class="form">
           <label for="note">Add note (optional):</label><br />
@@ -69,6 +69,7 @@
         </div>
 
         <div class="friend-list-wrapper">
+          <i class="fa fa-spinner fa-spin"></i>
         </div>
 
         <div class="shared-link-list">

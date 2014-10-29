@@ -247,6 +247,11 @@ div.click-selection h4 {
   text-align: left;
   padding-left: 20px;
 }
+.basket-name-alert,
+.friend-name-alert {
+  font-weight: bold;
+  display: inline;
+}
 
 .form{
   padding: 0 15px;
