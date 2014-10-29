@@ -1,7 +1,7 @@
 window.onload = function() {
   // Get users baskets and friends
   // ================================
-  // request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list-wrapper')
+  request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list-wrapper')
   // request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
   // request_handler('http://www.mybasketsapp.com/users_inbox_links', '.shared-link-list')
 

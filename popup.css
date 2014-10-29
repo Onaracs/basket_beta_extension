@@ -81,6 +81,19 @@ div.click-selection h4 {
   border-left: 6px solid #ddd;
 }
 
+.loading-screen {
+  width: 50%;
+  margin: 25% auto 0 auto;
+  text-align: center;
+  font-size: 32px;
+}
+
+.loading-screen h3 {
+  font-family: 'Lato';
+  font-size: 18px;
+  margin-top: 4px;
+}
+
 /* Basket List
 *****************************/
 .basket-list {
