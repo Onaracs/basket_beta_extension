@@ -1,16 +1,35 @@
 window.onload = function() {
   // Get users baskets and friends
   // ================================
-  request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
-  request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list')
-  request_handler('http://localhost:3000/users_inbox_links', '.shared-link-list')
-  // request_handler('http://www.localhost:3000.com/users_folders', '.basket-list')
-  // request_handler('http://www.localhost:3000.com/users_friends', '.friend-list')
+  request_handler('http://www.mybasketsapp.com/users_friends', '.friend-list-wrapper')
+  // request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
+  // request_handler('http://www.mybasketsapp.com/users_inbox_links', '.shared-link-list')
 
   // Get current url
   // ================================
   chrome.tabs.getSelected(null, function(tab) {
       tabUrl = tab.url;
+  });
+
+  $('.basket-select').on('click', function(){
+      request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
+    $('.alert').html('Save to: ' + '<p class="basket-name-alert"></p>')
+    $('.basket-list').show();
+    $('.friend-list-wrapper').hide();
+    $('.shared-link-list').hide();
+  });
+
+  $('.friend-select').on('click', function(){
+    $('.friend-list-wrapper').show();
+    $('.basket-list').hide();
+    $('.shared-link-list').hide();
+  });
+
+  $('.inbox-select').on('click', function(){
+      request_handler('http://www.mybasketsapp.com/users_inbox_links', '.shared-link-list')
+    $('.shared-link-list').show();
+    $('.basket-list').hide();
+    $('.friend-list-wrapper').hide();
   });
 
   // Check character count of message
@@ -28,23 +47,23 @@ window.onload = function() {
         $('#message').css("color", "black");
       }
 
-      message.innerHTML = (charsLeft) + " characters remainging";
+      message.innerHTML = (charsLeft);
   }
   setInterval(checkLength, 100);
 
   // Save a link to a basket
   // ================================
   $('.basket-list').on('click', '.basket-click', function(){
-    $('.basket-click').removeClass('highlight');
-    $('.friend-container').removeClass('highlight');
+    // $('.basket-click').removeClass('highlight');
+    // $('.friend-container').removeClass('highlight');
 
     var folderName = $(this).text();
     var folderId = $(this).attr('value');
     
-    $(this).addClass('highlight'),
+    // $(this).addClass('highlight'),
 
     
-    $('.alert').text('Save link to ' + folderName)
+    $('.basket-name-alert').text(folderName)
     $('.btn-text').text('Save')
 
     $('.note-container').slideDown("medium", function(){});
@@ -60,7 +79,6 @@ window.onload = function() {
         messageText = $('textarea#note').val();
         sendData('new_link', folderId, messageText, tabUrl)
         $('.alert').text('Link saved to ' + folderName).css('color', 'black');
-        $('.note-container').slideUp("medium", function(){});
       };
     });
   })
@@ -68,15 +86,15 @@ window.onload = function() {
   // Send a link to a friend
   // ================================
   $('.friend-list-wrapper').on('click', '.friend-container', function(){
-    $('.basket-click').removeClass('highlight');
-    $('.friend-container').removeClass('highlight');
+    // $('.basket-click').removeClass('highlight');
+    // $('.friend-container').removeClass('highlight');
 
     var friendName = $(this).text();
     var friendId = $(this).attr('value');
 
-    $(this).addClass('highlight'),
+    // $(this).addClass('highlight'),
 
-    $('.alert').text('Send this link to ' + friendName)
+    $('.friend-name-alert').text(friendName)
     $('.btn-text').text('Send')
     
     $('.note-container').slideDown("medium", function(){})
@@ -92,7 +110,6 @@ window.onload = function() {
         messageText = $('textarea#note').val();
         sendData('sent_link', friendId, messageText, tabUrl)
         $('.alert').text('Link sent to ' + friendName).css('color', 'black');
-        $('.note-container').slideUp("medium", function(){});
       };
     });
   })
