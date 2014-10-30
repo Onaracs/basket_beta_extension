@@ -201,35 +201,38 @@ div.click-selection h4 {
 }
 
 .shared-link-wrapper {
-  border-bottom: 1px solid #ddd;
-  margin: 10px;
+  border-bottom: 1px solid gray;
 }
 .shared-link-wrapper-container {
+  padding: 9px 22px;
   font-size: 14px;
   color: black;
-  background-color: #C6FFC9;
-  border: 1px solid #C6FFC9;
-  border-radius: 10px;
-  padding: 8px 5px;
-  margin: auto;
-  width: 218px;
+  border-bottom: 1px solid gray;
 }
-.shared-link-wrapper p {
-  margin: 0;
+.shared-link-wrapper-container:hover {
+  background-color: green;
 }
 
 .sender-name {
-  border-bottom: 1px solid black;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .shared-link-date,
 .shared-link-time {
   display: inline;
+  color: gray;
 }
 
 .shared-link-title-url p {
   margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.shared-link-message { 
+  display: none;
 }
 
 .shared-link-date,
