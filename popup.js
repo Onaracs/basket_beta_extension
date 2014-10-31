@@ -14,12 +14,15 @@ window.onload = function() {
   $('.basket-select').on('click', function(){
       request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
     $('.alert').html('Save to: ' + '<p class="basket-name-alert"></p>')
+    $('.btn-text').html('Save')
     $('.basket-list').show();
     $('.friend-list-wrapper').hide();
     $('.shared-link-list').hide();
   });
 
   $('.friend-select').on('click', function(){
+    $('.alert').html('Send to: ' + '<p class="friend-name-alert"></p>')
+    $('.btn-text').html('Send')
     $('.friend-list-wrapper').show();
     $('.basket-list').hide();
     $('.shared-link-list').hide();
@@ -54,21 +57,13 @@ window.onload = function() {
   // Save a link to a basket
   // ================================
   $('.basket-list').on('click', '.basket-click', function(){
-    // $('.basket-click').removeClass('highlight');
-    // $('.friend-container').removeClass('highlight');
-
     var folderName = $(this).text();
     var folderId = $(this).attr('value');
     
-    // $(this).addClass('highlight'),
-
-    
     $('.basket-name-alert').text(folderName)
-    $('.btn-text').text('Save')
-
     $('.note-container').slideDown("medium", function(){});
 
-    $('.cancel-btn').on('click', function(){
+    $('.cancel-btn').on('click', function() {
       $('.note-container').slideUp("medium", function(){})
     })
 
@@ -85,10 +80,7 @@ window.onload = function() {
 
   // Send a link to a friend
   // ================================
-  $('.friend-list-wrapper').on('click', '.friend-container', function(){
-    // $('.basket-click').removeClass('highlight');
-    // $('.friend-container').removeClass('highlight');
-
+  $('.friend-list-wrapper').on('click', '.friend-container', function() {
     var friendName = $(this).text();
     var friendId = $(this).attr('value');
 

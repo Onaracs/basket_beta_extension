@@ -11,7 +11,7 @@ body {
 }
 
 .header-title {
-  height: 15px;
+  height: 22px;
   width: 100%;
   background-color: #90EE90;
   margin-top: 0;
@@ -31,8 +31,16 @@ body {
   font-weight: 100;
   margin: 0;
   display: inline;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   font-size: 29px;
+  font-family: 'Montserrat';
+}
+
+.header-title h4 {
+  display: inline;
+  font-weight: 100;
+  margin-left: 5px;
+  letter-spacing: -2px;  
   font-family: 'Montserrat';
 }
 
@@ -193,6 +201,7 @@ div.click-selection h4 {
 
 .shared-link-list {
   height: 100%;
+  width: 106%;
   overflow-y: auto;
   background: #ffffff;
   font-family: 'Lato';
@@ -201,16 +210,16 @@ div.click-selection h4 {
 }
 
 .shared-link-wrapper {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ddd;
 }
 .shared-link-wrapper-container {
   padding: 9px 22px;
   font-size: 14px;
   color: black;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ddd;
 }
 .shared-link-wrapper-container:hover {
-  background-color: green;
+  background-color: #F0FFF0;
 }
 
 .sender-name {
@@ -257,11 +266,11 @@ div.click-selection h4 {
 }
 
 .note-container .alert{
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Lato';
   margin: 9px 0;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 16px;
 }
 .basket-name-alert,
 .friend-name-alert {
