@@ -12,24 +12,36 @@ window.onload = function() {
   });
 
   $('.basket-select').on('click', function(){
+    $('.friend-select.highlight-select').removeClass('highlight-select');
+    $('.inbox-select.highlight-select').removeClass('highlight-select');
+    $('.basket-select').addClass('highlight-select');
       request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
     $('.alert').html('Save to: ' + '<p class="basket-name-alert"></p>')
     $('.btn-text').html('Save')
+
     $('.basket-list').show();
     $('.friend-list-wrapper').hide();
     $('.shared-link-list').hide();
   });
 
   $('.friend-select').on('click', function(){
+    $('.basket-select.highlight-select').removeClass('highlight-select');
+    $('.inbox-select.highlight-select').removeClass('highlight-select');
+    $('.friend-select').addClass('highlight-select');
     $('.alert').html('Send to: ' + '<p class="friend-name-alert"></p>')
     $('.btn-text').html('Send')
+
     $('.friend-list-wrapper').show();
     $('.basket-list').hide();
     $('.shared-link-list').hide();
   });
 
   $('.inbox-select').on('click', function(){
+    $('.friend-select.highlight-select').removeClass('highlight-select');
+    $('.basket-select.highlight-select').removeClass('highlight-select');
+    $('.inbox-select').addClass('highlight-select');
       request_handler('http://www.mybasketsapp.com/users_inbox_links', '.shared-link-list')
+
     $('.shared-link-list').show();
     $('.basket-list').hide();
     $('.friend-list-wrapper').hide();
