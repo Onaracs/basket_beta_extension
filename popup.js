@@ -12,21 +12,40 @@ window.onload = function() {
   });
 
   $('.basket-select').on('click', function(){
+    $('.friend-select.highlight-select').removeClass('highlight-select');
+    $('.inbox-select.highlight-select').removeClass('highlight-select');
+    $('.send-btn').show();
+    $('.basket-select').addClass('highlight-select');
       request_handler('http://www.mybasketsapp.com/users_folders', '.basket-list')
     $('.alert').html('Save to: ' + '<p class="basket-name-alert"></p>')
+    $('.btn-text').html('Save')
+
     $('.basket-list').show();
     $('.friend-list-wrapper').hide();
     $('.shared-link-list').hide();
   });
 
   $('.friend-select').on('click', function(){
+    $('.basket-select.highlight-select').removeClass('highlight-select');
+    $('.inbox-select.highlight-select').removeClass('highlight-select');
+    $('.send-btn').show();
+    $('.friend-select').addClass('highlight-select');
+    $('.alert').html('Send to: ' + '<p class="friend-name-alert"></p>')
+    $('.btn-text').html('Send')
+
     $('.friend-list-wrapper').show();
     $('.basket-list').hide();
     $('.shared-link-list').hide();
   });
 
   $('.inbox-select').on('click', function(){
+    $('.friend-select.highlight-select').removeClass('highlight-select');
+    $('.basket-select.highlight-select').removeClass('highlight-select');
+    $('.send-btn').hide();
+    $('.alert').html('Links sent to you')
+    $('.inbox-select').addClass('highlight-select');
       request_handler('http://www.mybasketsapp.com/users_inbox_links', '.shared-link-list')
+
     $('.shared-link-list').show();
     $('.basket-list').hide();
     $('.friend-list-wrapper').hide();
@@ -54,23 +73,12 @@ window.onload = function() {
   // Save a link to a basket
   // ================================
   $('.basket-list').on('click', '.basket-click', function(){
-    // $('.basket-click').removeClass('highlight');
-    // $('.friend-container').removeClass('highlight');
-
+    $('.basket-click').removeClass('send-basket-select');
+    $(this).addClass('send-basket-select');
     var folderName = $(this).text();
     var folderId = $(this).attr('value');
     
-    // $(this).addClass('highlight'),
-
-    
     $('.basket-name-alert').text(folderName)
-    $('.btn-text').text('Save')
-
-    $('.note-container').slideDown("medium", function(){});
-
-    $('.cancel-btn').on('click', function(){
-      $('.note-container').slideUp("medium", function(){})
-    })
 
     $('.send-btn-button').on('click', function(){
       if (area.value.length > maxLength){
@@ -85,23 +93,15 @@ window.onload = function() {
 
   // Send a link to a friend
   // ================================
-  $('.friend-list-wrapper').on('click', '.friend-container', function(){
-    // $('.basket-click').removeClass('highlight');
-    // $('.friend-container').removeClass('highlight');
-
+  $('.friend-list-wrapper').on('click', '.friend-container', function() {
+    $('.friend-container').removeClass('send-friend-select');
+    $(this).addClass('send-friend-select');
     var friendName = $(this).text();
     var friendId = $(this).attr('value');
 
     // $(this).addClass('highlight'),
 
     $('.friend-name-alert').text(friendName)
-    $('.btn-text').text('Send')
-    
-    $('.note-container').slideDown("medium", function(){})
-
-    $('.cancel-btn').on('click', function(){
-      $('.note-container').slideUp("medium", function(){})
-    })
 
     $('.send-btn-button').on('click', function(){
       if (area.value.length > maxLength){
@@ -114,10 +114,6 @@ window.onload = function() {
     });
   })
 };
-
-
-
-
 
 function request_handler(url, changed_div) {
   var req = new XMLHttpRequest();
