@@ -197,6 +197,7 @@ div.click-selection h4 {
   color: white;
 }
 
+
 .friend-container img {
   padding-left: 16px;
   width: 50%;
@@ -214,6 +215,12 @@ div.click-selection h4 {
   margin-left: -12px;
 }
 
+.send-basket-select,
+.send-friend-select {
+  background-color: #90ee90;
+  border: 1px solid #90ee90;
+  color: white;
+}
 /* Inbox List
 *****************************/
 .shared-link-list a {
@@ -332,6 +339,7 @@ div.click-selection h4 {
 
 .cancel-btn{
   margin-right: 4px;
+  display: none;
 }
 
 .send-btn img,
