@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-csp ng-app="basketNg">
+<html ng-csp ng-app="app">
 <head>
   <title>Basket</title>
   <link rel="stylesheet" href="/styles/main.css">
@@ -35,13 +35,16 @@
     <section name="navbar" class="navigation">
       <ul>
         <li class="click-selection friend-select highlight-select"
-            ng-click="shareLink()">Share
+            ng-click="shareLink()">
+            <a ui-sref="share">Share</a>
         </li>
         <li class="click-selection basket-select"
-            ng-click="saveLink()">Save
+            ng-click="saveLink()">
+            <a ui-sref="save">Save</a>
         </li>
         <li class="click-selection inbox-select"
-            ng-click="getBaskets">Baskets
+            ng-click="getBaskets">
+            <a ui-sref="baskets">Baskets</a>
         </li>
       </ul>
     </section>
@@ -86,7 +89,8 @@
       </div>
     </section> -->
 
-      <div class="note-container" ng-if="showMessage">
+      <div class="note-container" 
+            ng-if="showMessage">
         <div class="alert">
           Send to: <p class="friend-name-alert"></p>
         </div>

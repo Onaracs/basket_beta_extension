@@ -1,25 +1,33 @@
-var basketNg = angular.module('basketNg', [
-
-
+var app = angular.module('app', [
+  'ui.router'
 ]);
 
-basketNg.config(function(
+app.config(function(
 	$stateProvider, 
 	$urlRouterProvider
 ) {
 
 	$urlRouterProvider.otherwise('save');
 
-	$stateProvider      
+	$stateProvider
+    .state('share', {
+      url: '/share',
+      controller: 'ShareCtrl',
+      templateUrl: 'views/shareLink.html'
+    })
 	  .state('save', {
 	    url: '/save',
 	    controller: 'SaveCtrl',
 	    templateUrl: 'views/saveBaskets.html'
 	  })
-
+    .state('baskets', {
+      url: '/baskets',
+      controller: 'BasketCtrl',
+      templateUrl: 'views/myBaskets.html'
+    })
 })
 
-basketNg.controller('toggleCtrl', ['$scope', function($scope) {
+app.controller('toggleCtrl', ['$scope', function($scope) {
 	console.log("In the controller");
 
   $scope.tab = 1;
@@ -41,7 +49,7 @@ basketNg.controller('toggleCtrl', ['$scope', function($scope) {
   }
 }]);
 
-basketNg.factory('sharedLinks',  ['http', function($http){
+app.factory('sharedLinks',  ['http', function($http){
   var sharedLinks = {}
 
   sharedLinks.get = function() {
