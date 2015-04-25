@@ -15,6 +15,10 @@
   <script type="text/javascript" src="scripts/app.js"></script>
   <script src="scripts/angular-ui-router.min.js"></script>
   <script src="scripts/jquery.min.js"></script>
+
+  <script type="text/javascript" src="scripts/controllers/shareCtrl.js"></script>
+  <script type="text/javascript" src="scripts/controllers/saveCtrl.js"></script>
+  <script type="text/javascript" src="scripts/controllers/basketCtrl.js"></script>
   <!-- <script language='javascript' src='background.js'></script>
   <script language='javascript' src='popup.js'></script> -->
 </head>
@@ -34,18 +38,21 @@
 
     <section name="navbar" class="navigation">
       <ul>
-        <li class="click-selection friend-select highlight-select"
-            ng-click="shareLink()">
-            <a ui-sref="share">Share</a>
-        </li>
-        <li class="click-selection basket-select"
-            ng-click="saveLink()">
-            <a ui-sref="save">Save</a>
-        </li>
-        <li class="click-selection inbox-select"
-            ng-click="getBaskets">
-            <a ui-sref="baskets">Baskets</a>
-        </li>
+        <a ui-sref="share">
+          <li class="click-selection friend-select highlight-select">
+              Share
+          </li>
+        </a>
+        <a ui-sref="save">
+          <li class="click-selection basket-select">
+            Save
+          </li>
+        </a>
+        <a ui-sref="baskets">
+          <li class="click-selection inbox-select">
+            Baskets
+          </li>
+        </a>
       </ul>
     </section>
 

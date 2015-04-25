@@ -1,5 +1,8 @@
 var app = angular.module('app', [
-  'ui.router'
+  'ui.router',
+  'ShareCtrl',
+  'SaveCtrl',
+  'BasketCtrl'
 ]);
 
 app.config(function(
@@ -28,8 +31,6 @@ app.config(function(
 })
 
 app.controller('toggleCtrl', ['$scope', function($scope) {
-	console.log("In the controller");
-
   $scope.tab = 1;
 
   $scope.setTab = function(tabNumber) {
@@ -39,14 +40,6 @@ app.controller('toggleCtrl', ['$scope', function($scope) {
   $scope.isSet = function(tabNumber) {
     return tabNumber === $scope.tab;
   };
-
-  $scope.shareLink = function() {
-  	console.log("You are about to share");
-  };
-
-  $scope.saveLink = function() {
-  	console.log("You are about to save");
-  }
 }]);
 
 app.factory('sharedLinks',  ['http', function($http){
