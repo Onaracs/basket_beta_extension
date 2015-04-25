@@ -54,34 +54,3 @@ body {
   font-size: 10px;
   margin-top: -8px;
 }
-
-/*===================================
-            Navigation Area
-====================================*/
-.navigation {
-  background: #191919;
-  color: gray;
-  height: 40px;
-}
-
-.navigation ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.navigation ul li {
-  height: 35px;
-  width: 31%;
-  float: left;
-  cursor: pointer;
-  display: inline-block;
-  border-right: 1px solid #212121;
-  border-left: 1px solid #0a0c0e;
-  text-align: center;
-}
-
-.navigation ul li:hover {
-  color: #fff;
-  border-bottom: 5px solid #90EE90;
-}

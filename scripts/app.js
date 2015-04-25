@@ -2,7 +2,8 @@ var app = angular.module('app', [
   'ui.router',
   'ShareCtrl',
   'SaveCtrl',
-  'BasketCtrl'
+  'BasketCtrl',
+  'getBaskets'
 ]);
 
 app.config(function(

@@ -1,7 +1,16 @@
-angular.module('SaveCtrl', [])
+angular.module('SaveCtrl', [
+  'getBaskets'
+])
 
-.controller('SaveCtrl', ['$scope', function($scope) {
+.controller('SaveCtrl', ['$scope', 'getUsersBaskets', function(
+  $scope, 
+  getUsersBaskets
+) {
 
-  console.log('In the save controller');
+  // Make call to Rails API to get a list of the users baskets
+  getUsersBaskets().then(function(result) {
+    console.log(result);
+    $scope.baskets = result.data;
+  });
 
 }])
