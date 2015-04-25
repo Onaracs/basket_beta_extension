@@ -9,6 +9,7 @@ angular.module('ShareCtrl', [
 
   getUsersFriends().then(function(response) {
     console.log(response);
+    $scope.friends = response.data;
   })
 
 }])

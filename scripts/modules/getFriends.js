@@ -3,7 +3,7 @@ angular.module('getFriends', [])
 .factory('getUsersFriends', ['$http', function($http) {
 
   return function() {
-    var url = 'http://localhost:3000/users_friends'
+    var url = 'http://localhost:3000/ng_users_friends'
 
     var promise = $http({
       url: url,
