@@ -1,7 +1,31 @@
-<h1>This is where you will save</h1>
-
-<ul>
-  <li ng-repeat="basket in baskets">
+<ul class="users-baskets-list">
+  <li ng-repeat="basket in baskets"
+      ng-click="showSubmit(basket)">
     {{basket.name}}
   </li>
 </ul>
+
+<div class="note-container" 
+      ng-if="showMessage">
+  <div class="alert">
+    Save to: <p class="friend-name-alert">{{selectedBasket.name}}</p>
+  </div>
+  <form class="form">
+    <p class="text-container">
+      <textarea id="note" name="note" cols="50" rows="7" 
+                placeholder="Add note (optional):"
+                ng-model="message">
+        {{message}}
+      </textarea>
+    </p>
+  </form>
+  <div class="character-count">
+    <p id="message"></p>
+  </div>
+  <div class="send-btn"
+        ng-click="saveLink(selectedBasket.id)">
+    <div class="send-btn-button">
+      <p class="btn-text">Send</p>
+    </div>
+  </div>
+</div>

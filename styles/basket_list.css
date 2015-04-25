@@ -1,0 +1,23 @@
+.users-baskets-list {
+  background: #191919;
+  color: #fff;
+  overflow-y: auto;
+  font-family: 'Lato';
+  list-style: none;
+  padding: 0;
+}
+
+.users-baskets-list li {
+    cursor: pointer;
+    list-style: none;
+    padding: 10px 0 10px 25px;
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #0a0c0e;
+    font-size: 16px;
+}
+.users-baskets-list li:hover {
+  background: #111;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #0a0c0e;
+  border-right: 6px solid #90EE90;
+}

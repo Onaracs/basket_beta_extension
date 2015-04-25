@@ -1,10 +1,9 @@
-angular.module('getBaskets', [])
+angular.module('getFriends', [])
 
-.factory('getUsersBaskets', ['$http', function($http) {
+.factory('getUsersFriends', ['$http', function($http) {
 
-  
   return function() {
-    var url = 'http://localhost:3000/ng_users_folders';
+    var url = 'http://localhost:3000/users_friends'
 
     var promise = $http({
       url: url,
@@ -15,7 +14,7 @@ angular.module('getBaskets', [])
 
     }).error(function(response) {
 
-      return {'status': false};
+      return {'status':false};
 
     })
 

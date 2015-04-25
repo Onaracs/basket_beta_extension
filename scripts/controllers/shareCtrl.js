@@ -1,7 +1,14 @@
-angular.module('ShareCtrl', [])
+angular.module('ShareCtrl', [
+  'getFriends'
+])
 
-.controller('ShareCtrl', ['$scope', function($scope) {
+.controller('ShareCtrl', ['$scope', 'getUsersFriends', function(
+  $scope,
+  getUsersFriends
+) {
 
-  console.log('In the share controller');
+  getUsersFriends().then(function(response) {
+    console.log(response);
+  })
 
 }])
